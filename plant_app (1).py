@@ -37,7 +37,6 @@ if uploaded_file is not None:
     prediction = model.predict(img, verbose=0)
 
     predicted_index = np.argmax(prediction)
-    confidence = np.max(prediction) * 100
-
+    
     st.success(f"Predicted Disease: {class_names[predicted_index]}")
-    st.info(f"Confidence: {confidence:.2f}%")
+   
